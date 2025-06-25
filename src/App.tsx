@@ -1,7 +1,7 @@
-import "./index.scss";
+import "./styles/index.scss";
 
 const App = () => {
-  return <div className='app'>React</div>;
+  return <div className='app'>Главная</div>;
 };
 
 export default App;

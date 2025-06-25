@@ -1,0 +1,13 @@
+@use "./variables/global.scss";
+@forward "reset.scss";
+@forward "./themes/dark.scss";
+@forward "./themes/light.scss";
+
+.app {
+  font: var(--font-m);
+
+  background: var(--bg-color);
+  color: var(--primary-color);
+
+  min-height: 100vh;
+}
