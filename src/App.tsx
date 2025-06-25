@@ -1,7 +1,16 @@
 import "./styles/index.scss";
+import { useTheme } from "./theme/useTheme";
 
 const App = () => {
-  return <div className='app'>Главная</div>;
+  const { theme, toggleTheme } = useTheme();
+  return (
+    <div>
+      <div className={`app ${theme}`}>
+        <h2>Главная</h2>
+        <button onClick={toggleTheme}>Toggle theme</button>
+      </div>
+    </div>
+  );
 };
 
 export default App;
