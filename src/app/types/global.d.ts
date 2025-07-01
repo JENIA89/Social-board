@@ -8,3 +8,5 @@ declare module "*.scss" {
 
 declare module "*.svg";
 declare module "*.png";
+
+declare const __IS__DEV: boolean;
