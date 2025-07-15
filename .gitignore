@@ -8,3 +8,5 @@ node_modules/
 # production
 /build
 /dist
+*storybook.log
+storybook-static
