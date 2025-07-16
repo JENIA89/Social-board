@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Sidebar } from './Sidebar';
@@ -13,12 +14,20 @@ jest.mock('widgets/LangSwitcher', () => ({
 
 describe('SideBar', () => {
     test('Test with id', () => {
-        render(<Sidebar />);
+        render(
+            <MemoryRouter initialEntries={['/my-route']}>
+                <Sidebar />
+            </MemoryRouter>
+        );
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
     test('Test with toggle', () => {
-        render(<Sidebar />);
+        render(
+            <MemoryRouter initialEntries={['/my-route']}>
+                <Sidebar />
+            </MemoryRouter>
+        );
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);
