@@ -10,6 +10,12 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
+    span {
+        opacity: 0;
+        transition: 0.1 opacity;
+        width: 0;
+    }
 }
 
 .switchers {
@@ -17,4 +23,32 @@
     bottom: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.collapseBtn {
+    position: absolute;
+    bottom: 20px;
+    right: -30px;
+    width: 40px;
+    height: 40px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+        display: flex;
+        margin-bottom: 15px;
+        text-decoration: none;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            fill: var(--inverted-primary-color);
+            margin-right: 10px;
+        }
+    }
 }

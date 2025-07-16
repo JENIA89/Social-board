@@ -31,3 +31,17 @@ export const Outline: Story = {
         theme: ThemeButton.OUTLINE,
     },
 };
+
+export const Background: Story = {
+    args: {
+        children: 'Button',
+        theme: ThemeButton.BACKGROUNG,
+    },
+};
+
+export const BackgroundInverted: Story = {
+    args: {
+        children: 'Button',
+        theme: ThemeButton.BACKGROUNG_INVERTED,
+    },
+};

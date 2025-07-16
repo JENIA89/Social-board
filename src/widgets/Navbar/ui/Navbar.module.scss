@@ -6,16 +6,3 @@
     align-items: center;
     padding: 15px;
 }
-
-.links {
-    margin-left: auto;
-
-    a {
-        text-decoration: none;
-        margin-right: 15px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
