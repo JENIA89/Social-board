@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { fn } from 'storybook/test';
 import 'app/styles/index.scss';
 import { Modal } from './Modal';
 
 const meta = {
     title: 'shared/Modal',
     component: Modal,
-    args: { onClick: fn() },
+    args: {},
 } satisfies Meta<typeof Modal>;
 
 export default meta;
