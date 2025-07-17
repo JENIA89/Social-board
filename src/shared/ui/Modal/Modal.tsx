@@ -8,6 +8,7 @@ interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
 }
+
 export const Modal: FC<ModalProps> = (props) => {
     const { className, children, isOpen, onClose } = props;
 

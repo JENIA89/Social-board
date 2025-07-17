@@ -45,3 +45,10 @@ export const BackgroundInverted: Story = {
         theme: ThemeButton.BACKGROUNG_INVERTED,
     },
 };
+
+export const OutlineInverted: Story = {
+    args: {
+        children: 'Button',
+        theme: ThemeButton.OUTLINE_INVERTED,
+    },
+};

@@ -16,6 +16,13 @@
     background: none;
 }
 
+.outlineInverted {
+    padding: 10px;
+    border: 1px solid var(--inverted-secondary-color);
+    color: var(--inverted-secondary-color);
+    background: none;
+}
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);

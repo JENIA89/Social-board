@@ -1,7 +1,7 @@
-@use "./variables/global.scss";
-@forward "reset.scss";
-@forward "./themes/dark.scss";
-@forward "./themes/light.scss";
+@use './variables/global.scss';
+@forward 'reset.scss';
+@forward './themes/dark.scss';
+@forward './themes/light.scss';
 
 .app {
     font: var(--font-m);
