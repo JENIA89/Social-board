@@ -1,6 +1,7 @@
 import React, { FC, ReactNode, useCallback, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
+import { useTheme } from 'app/providers/ThemeProviders';
 
 interface ModalProps {
     className?: string;
@@ -11,6 +12,7 @@ interface ModalProps {
 
 export const Modal: FC<ModalProps> = (props) => {
     const { className, children, isOpen, onClose } = props;
+    const { theme } = useTheme();
 
     const onCloseHandler = useCallback(() => {
         if (onClose) {
@@ -42,7 +44,7 @@ export const Modal: FC<ModalProps> = (props) => {
     }, [isOpen, onKeyDown]);
 
     return (
-        <div className={classNames(cls.modal, mods, [className])}>
+        <div className={classNames(cls.modal, mods, [className, theme])}>
             <div className={cls.overlay} onClick={onCloseHandler}>
                 <div className={cls.content} onClick={(e) => e.stopPropagation()}>
                     {children}
