@@ -19,12 +19,13 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
         }),
     ];
 
+    plugins.push(
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        })
+    );
+
     if (isDev) {
-        plugins.push(
-            new BundleAnalyzerPlugin({
-                openAnalyzer: false,
-            })
-        );
         plugins.push(new HotModuleReplacementPlugin());
     }
     return plugins;
